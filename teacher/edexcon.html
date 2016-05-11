@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html ng-app="ui.bootstrap.demo">
+<head>
+	 <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <!---->
+    <link rel="stylesheet" href="css/ace.min.css" />
+    <link rel="stylesheet" href="css/ace-skins.min.css" />
+    <link rel="stylesheet" href="css/ace-rtl.min.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/jquery-ui-1.10.3.custom.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/flat-ui.css">
+    <link rel="stylesheet" type="text/css" href="css/mycss.css">
+
+    <script type="text/javascript" src="js/angular.js"></script>
+    <script type="text/javascript" src="js/angular-animate.js"></script>
+    <script type="text/javascript" src="js/angular-touch.js"></script>
+    <script type="text/javascript" src="js/angular-route.js"></script>
+    <script type="text/javascript" src="js/ui-bootstrap-tpls-1.2.5.js"></script>
+    <script type="text/javascript" src="js/example.js"></script>
+    <script type="text/javascript" src="js/Chart.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+    <script src="js/ace-extra.min.js"></script>
+</head>
+<body style="background-color: #BDC3C7">
+<div>
+    <header>
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#"><img src="avatars/logo.png" style="width: 20px;height: 20px;"></a>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li><a href="home.html">首页</a></li>
+                        <li><a href="edex.html">编辑实验</a></li>
+                        <li><a href="edexcon.html">编辑实验内容</a></li>
+                        <li><a href="codu.html">批改文档</a></li>
+                        <li><a href="viewre.html">查看成绩</a></li>
+                    </ul>
+                 <div class="navbar-header pull-right" role="navigation">
+                    <ul class="nav ace-nav">
+                        <li >
+                            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                                <i class="icon-envelope icon-animated-vertical"></i>
+                                <span class="badge badge-success">5</span>
+                            </a>
+
+                            <ul class="pull-right dropdown-navbar dropdown-menu dropdown-caret dropdown-close">
+                                <li class="dropdown-header">
+                                    <i class="icon-envelope-alt"></i>
+                                    5条消息
+                                </li>
+
+                                <li>
+                                    <a href="message.html">
+                                        <img src="avatars/avatar.png" class="msg-photo" alt="Alex's Avatar" />
+                                        <span class="msg-body">
+                                            <span class="msg-title">
+                                                <span class="blue">Alex:</span>
+                                                提交了一个作业
+                                            </span>
+
+                                            <span class="msg-time">
+                                                <i class="icon-time"></i>
+                                                <span>1分钟以前</span>
+                                            </span>
+                                        </span>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="message.html">
+                                        <img src="avatars/avatar3.png" class="msg-photo" alt="Susan's Avatar" />
+                                        <span class="msg-body">
+                                            <span class="msg-title">
+                                                <span class="blue">Susan:</span>
+                                                不知道翻译...
+                                            </span>
+
+                                            <span class="msg-time">
+                                                <i class="icon-time"></i>
+                                                <span>20分钟以前</span>
+                                            </span>
+                                        </span>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="message.html">
+                                        <img src="avatars/avatar4.png" class="msg-photo" alt="Bob's Avatar" />
+                                        <span class="msg-body">
+                                            <span class="msg-title">
+                                                <span class="blue">Bob:</span>
+                                                到底是不是英文 ...
+                                            </span>
+
+                                            <span class="msg-time">
+                                                <i class="icon-time"></i>
+                                                <span>下午3:15</span>
+                                            </span>
+                                        </span>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="message.html">
+                                        查看所有消息
+                                        <i class="icon-arrow-right"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="light-blue">
+                            <a data-toggle="dropdown" href="#" class="dropdown-toggle">
+                                <img class="nav-user-photo" src="avatars/user.jpg" alt="Jason's Photo" />
+
+                                <i class="icon-caret-down"></i>
+                            </a>
+
+                            <ul class="user-menu pull-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
+                                <li>
+                                    <a href="perinfo.html">
+                                        <i class="icon-cog"></i>
+                                        设置
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="perinfo.html">
+                                        <i class="icon-user"></i>
+                                        个人资料
+                                    </a>
+                                </li>
+
+                                <li class="divider"></li>
+
+                                <li>
+                                    <a href="login.html">
+                                        <i class="icon-off"></i>
+                                        退出
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                 </div>
+                </div>
+            </div>
+        </nav>
+  </header>
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="col-md-2">
+          <div class="well sidebar-nav">
+            <ul class="nav nav-list">
+              <li class="nav-header">选择课程</li>
+              <li class="active"><a href="#">课程一</a></li>
+              <li><a href="#">课程二</a></li>
+              <li><a href="#">课程三</a></li>
+              <li><a href="#">课程四</a></li>
+              <li><a href="#">课程五</a></li>
+              <li class="nav-header">选择实验</li>
+              <li class="active"><a href="#">实验一</a></li>
+              <li><a href="#">实验二</a></li>
+              <li><a href="#">实验三</a></li>
+              <li><a href="#">实验四</a></li>
+              <li><a href="#">实验五</a></li>
+           </ul>
+          </div><!--/.well -->
+        </div>
+        <div class="col-md-10">
+            <nav class="navbar navbar-default" role="navigation">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">题目</a>
+                </div>
+                <div class="collapse navbar-collapse" id="navbar-collapse-01" ng-controller="CollapseDemoCtrl">
+                    <button type="button" class="btn btn-info btn-sm glyphicon glyphicon-align-justify" ng-click="isCollapsed = !isCollapsed">题目一</button>
+                    <button class="btn btn-info navbar-btn btn-sm glyphicon glyphicon-align-justify" type="button">题目二</button>
+                    <button class="btn btn-info navbar-btn btn-sm glyphicon glyphicon-align-justify" type="button">题目三</button>
+                    <button class="btn btn-info navbar-btn btn-sm glyphicon glyphicon-align-justify" type="button">题目四</button>
+                    <button class="btn btn-info navbar-btn btn-sm glyphicon glyphicon-plus" type="button"></button>
+                    <div uib-collapse="isCollapsed">
+                        <div class="well well-lg">
+                    <div class="page-content">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <!-- PAGE CONTENT BEGINS -->
+
+                                <h4 class="header blue clearfix">
+                                    编辑题目内容
+                                    <span class="block pull-right">
+                                        <small class="grey middle">选择样式: &nbsp;</small>
+
+                                        <span class="btn-toolbar inline middle no-margin">
+                                            <span data-toggle="buttons" class="btn-group no-margin">
+                                                <label class="btn btn-sm btn-yellow active">
+                                                    1
+                                                    <input type="radio" value="1" />
+                                                </label>
+
+                                                <label class="btn btn-sm btn-yellow ">
+                                                    2
+                                                    <input type="radio" value="2" />
+                                                </label>
+
+                                                <label class="btn btn-sm btn-yellow">
+                                                    3
+                                                    <input type="radio" value="3" />
+                                                </label>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </h4>
+
+                                <div class="wysiwyg-editor" id="editor1"></div>
+
+                                <div class="hr hr-double dotted"></div>
+
+                                                <div class="widget-toolbox padding-4 clearfix">
+                                                    <div class="btn-group pull-left">
+                                                        <input class="form-control input-sm" type="text"  placeholder="该题总分" style="width: 60;" />
+                                                    </div>
+
+                                                    <div class="btn-group pull-right">
+                                                        <button class="btn btn-sm btn-info">
+                                                            <i class="icon-remove bigger-125"></i>
+                                                            Cancel
+                                                        </button>
+                                                        <button class="btn btn-sm btn-success">
+                                                            <i class="icon-save bigger-125"></i>
+                                                            Save
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <script type="text/javascript">
+                                    var $path_assets = "assets";//this will be used in loading jQuery UI if needed!
+                                </script>
+
+                                <!-- PAGE CONTENT ENDS -->
+                            </div><!-- /.col -->
+                        </div><!-- /.row -->
+                    </div><!-- /.page-content -->
+
+
+
+                        </div>
+                    </div>
+                </div><!-- /.navbar-collapse -->
+            </nav><!-- /navbar -->
+
+          </div>
+
+          <hr>
+      </div>
+
+    </div><!--/.fluid-container-->
+
+</div>
+<script type="text/javascript">
+    $("select").select2({dropdownCssClass: 'dropdown-inverse'});
+</script>
+
+
+
+        <script type="text/javascript">
+            window.jQuery || document.write("<script src='js/jquery-2.0.3.min.js'>"+"<"+"/script>");
+        </script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/typeahead-bs2.min.js"></script>
+
+        <!-- page specific plugin scripts -->
+
+        <script src="js/jquery-ui-1.10.3.custom.min.js"></script>
+        <script src="js/jquery.ui.touch-punch.min.js"></script>
+        <script src="js/markdown/markdown.min.js"></script>
+        <script src="js/markdown/bootstrap-markdown.min.js"></script>
+        <script src="js/jquery.hotkeys.min.js"></script>
+        <script src="js/bootstrap-wysiwyg.min.js"></script>
+        <script src="js/bootbox.min.js"></script>
+
+        <!-- ace scripts -->
+
+        <script src="js/ace-elements.min.js"></script>
+        <script src="js/ace.min.js"></script>
+        <script type="text/javascript">
+            jQuery(function($){
+
+    function showErrorAlert (reason, detail) {
+        var msg='';
+        if (reason==='unsupported-file-type') { msg = "Unsupported format " +detail; }
+        else {
+            console.log("error uploading file", reason, detail);
+        }
+        $('<div class="alert"> <button type="button" class="close" data-dismiss="alert">&times;</button>'+
+         '<strong>File upload error</strong> '+msg+' </div>').prependTo('#alerts');
+    }
+    $('#editor1').ace_wysiwyg({
+        toolbar:
+        [
+            'font',
+            null,
+            'fontSize',
+            null,
+            {name:'bold', className:'btn-info'},
+            {name:'italic', className:'btn-info'},
+            {name:'strikethrough', className:'btn-info'},
+            {name:'underline', className:'btn-info'},
+            null,
+            {name:'insertunorderedlist', className:'btn-success'},
+            {name:'insertorderedlist', className:'btn-success'},
+            {name:'outdent', className:'btn-purple'},
+            {name:'indent', className:'btn-purple'},
+            null,
+            {name:'justifyleft', className:'btn-primary'},
+            {name:'justifycenter', className:'btn-primary'},
+            {name:'justifyright', className:'btn-primary'},
+            {name:'justifyfull', className:'btn-inverse'},
+            null,
+            {name:'createLink', className:'btn-pink'},
+            {name:'unlink', className:'btn-pink'},
+            null,
+            {name:'insertImage', className:'btn-success'},
+            null,
+            'foreColor',
+            null,
+            {name:'undo', className:'btn-grey'},
+            {name:'redo', className:'btn-grey'}
+        ],
+        'wysiwyg': {
+            fileUploadError: showErrorAlert
+        }
+    }).prev().addClass('wysiwyg-style1');
+    $('[data-toggle="buttons"] .btn').on('click', function(e){
+        var target = $(this).find('input[type=radio]');
+        var which = parseInt(target.val());
+        var toolbar = $('#editor1').prev().get(0);
+        if(which == 1 || which == 2 || which == 3) {
+            toolbar.className = toolbar.className.replace(/wysiwyg\-style(1|2)/g , '');
+            if(which == 1) $(toolbar).addClass('wysiwyg-style1');
+            else if(which == 2) $(toolbar).addClass('wysiwyg-style2');
+        }
+    });
+    if ( typeof jQuery.ui !== 'undefined' && /applewebkit/.test(navigator.userAgent.toLowerCase()) ) {
+
+        var lastResizableImg = null;
+        function destroyResizable() {
+            if(lastResizableImg == null) return;
+            lastResizableImg.resizable( "destroy" );
+            lastResizableImg.removeData('resizable');
+            lastResizableImg = null;
+        }
+
+        var enableImageResize = function() {
+            $('.wysiwyg-editor')
+            .on('mousedown', function(e) {
+                var target = $(e.target);
+                if( e.target instanceof HTMLImageElement ) {
+                    if( !target.data('resizable') ) {
+                        target.resizable({
+                            aspectRatio: e.target.width / e.target.height,
+                        });
+                        target.data('resizable', true);
+
+                        if( lastResizableImg != null ) {//disable previous resizable image
+                            lastResizableImg.resizable( "destroy" );
+                            lastResizableImg.removeData('resizable');
+                        }
+                        lastResizableImg = target;
+                    }
+                }
+            })
+            .on('click', function(e) {
+                if( lastResizableImg != null && !(e.target instanceof HTMLImageElement) ) {
+                    destroyResizable();
+                }
+            })
+            .on('keydown', function() {
+                destroyResizable();
+            });
+        }
+
+        enableImageResize();
+
+    }
+
+
+});
+        </script>
+</body>
+</html>

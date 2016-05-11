@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html ng-app="ui.bootstrap.demo">
+<head>
+   <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <!---->
+    <link rel="stylesheet" href="css/ace.min.css" />
+    <link rel="stylesheet" href="css/ace-skins.min.css" />
+    <link rel="stylesheet" href="css/ace-rtl.min.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/jquery-ui-1.10.3.custom.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/flat-ui.css">
+    <link rel="stylesheet" type="text/css" href="css/mycss.css">
+
+    <script type="text/javascript" src="js/angular.js"></script>
+    <script type="text/javascript" src="js/angular-animate.js"></script>
+    <script type="text/javascript" src="js/angular-touch.js"></script>
+    <script type="text/javascript" src="js/angular-route.js"></script>
+    <script type="text/javascript" src="js/ui-bootstrap-tpls-1.2.5.js"></script>
+    <script type="text/javascript" src="js/example.js"></script>
+    <script type="text/javascript" src="js/Chart.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+    <script src="js/ace-extra.min.js"></script>
+</head>
+<body style="background-color: #BDC3C7">
+<div >
+    <header>
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#"><img src="avatars/logo.png" style="width: 20px;height: 20px;"></a>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li><a href="home.html">首页</a></li>
+                        <li><a href="edex.html">编辑实验</a></li>
+                        <li><a href="edexcon.html">编辑实验内容</a></li>
+                        <li><a href="codu.html">批改文档</a></li>
+                        <li><a href="viewre.html">查看成绩</a></li>
+                    </ul>
+                 <div class="navbar-header pull-right" role="navigation">
+                    <ul class="nav ace-nav">
+                        <li >
+                            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                                <i class="icon-envelope icon-animated-vertical"></i>
+                                <span class="badge badge-success">5</span>
+                            </a>
+
+                            <ul class="pull-right dropdown-navbar dropdown-menu dropdown-caret dropdown-close">
+                                <li class="dropdown-header">
+                                    <i class="icon-envelope-alt"></i>
+                                    5条消息
+                                </li>
+
+                                <li>
+                                    <a href="message.html">
+                                        <img src="avatars/avatar.png" class="msg-photo" alt="Alex's Avatar" />
+                                        <span class="msg-body">
+                                            <span class="msg-title">
+                                                <span class="blue">Alex:</span>
+                                                提交了一个作业
+                                            </span>
+
+                                            <span class="msg-time">
+                                                <i class="icon-time"></i>
+                                                <span>1分钟以前</span>
+                                            </span>
+                                        </span>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="message.html">
+                                        <img src="avatars/avatar3.png" class="msg-photo" alt="Susan's Avatar" />
+                                        <span class="msg-body">
+                                            <span class="msg-title">
+                                                <span class="blue">Susan:</span>
+                                                不知道翻译...
+                                            </span>
+
+                                            <span class="msg-time">
+                                                <i class="icon-time"></i>
+                                                <span>20分钟以前</span>
+                                            </span>
+                                        </span>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="message.html">
+                                        <img src="avatars/avatar4.png" class="msg-photo" alt="Bob's Avatar" />
+                                        <span class="msg-body">
+                                            <span class="msg-title">
+                                                <span class="blue">Bob:</span>
+                                                到底是不是英文 ...
+                                            </span>
+
+                                            <span class="msg-time">
+                                                <i class="icon-time"></i>
+                                                <span>下午3:15</span>
+                                            </span>
+                                        </span>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="message.html">
+                                        查看所有消息
+                                        <i class="icon-arrow-right"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="light-blue">
+                            <a data-toggle="dropdown" href="#" class="dropdown-toggle">
+                                <img class="nav-user-photo" src="avatars/user.jpg" alt="Jason's Photo" />
+
+                                <i class="icon-caret-down"></i>
+                            </a>
+
+                            <ul class="user-menu pull-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
+                                <li>
+                                    <a href="perinfo.html">
+                                        <i class="icon-cog"></i>
+                                        设置
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="perinfo.html">
+                                        <i class="icon-user"></i>
+                                        个人资料
+                                    </a>
+                                </li>
+
+                                <li class="divider"></li>
+
+                                <li>
+                                    <a href="login.html">
+                                        <i class="icon-off"></i>
+                                        退出
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                 </div>
+                </div>
+            </div>
+        </nav>
+  </header>
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="col-md-2">
+          <div class="well sidebar-nav">
+            <ul class="nav nav-list">
+              <li class="nav-header">选择课程</li>
+              <li class="active"><a href="#">课程一</a></li>
+              <li><a href="#">课程二</a></li>
+              <li><a href="#">课程三</a></li>
+              <li><a href="#">课程四</a></li>
+              <li><a href="#">课程五</a></li>
+           </ul>
+          </div><!--/.well -->
+        </div>
+        <div class="col-md-10">
+                <div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading panel-info clearfix">
+
+                            <div class=" pull-left">
+                            <!--<form role="form" class="form-inline">
+                                    <div class="form-group">
+                                        <label>
+                                            实验编号：
+                                        </label>
+
+                                        <select class="form-control" id="subjects" name="subjectId">
+                                        <option value="0">
+                                                --导入该老师上传实验的编号--
+                                            </option>
+                                        </select>
+                                        <label>
+                                            实验名称：
+                                        </label>
+
+                                        <select class="form-control" name="quesType" id="quesType">
+                                            <option value="0">
+                                                --导入该老师上传实验名称--
+                                            </option>
+                                        </select>
+                                        <label>
+                                            上传日期：
+                                        </label>
+                                        <input type="date" class="form-control" style="width:140px "></input>
+                                        <button type="submit" class="btn btn-success">
+                                            查询
+                                        </button>
+                                    </div>
+                                </form>-->
+
+                            </div>
+
+                            <div class=" pull-right">
+                                <div class="dropdown" ng-controller="ModalDemoCtrl">
+                                    <button class="btn btn-info glyphicon glyphicon-plus" type="submit" data-toggle="modal"  ng-click="open()" >增加</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel-body" ng-controller="ModalModifyCtrl">
+                            <table class="table table-bordered table-hover" style="background-color:#C1E2B3;">
+                                <thead>
+                                    <tr class=" text-info success ">
+                                        <th  class="text-center">
+                                            课程编号
+                                        </th>
+                                        <th  class="text-center">
+                                            实验编号
+                                        </th>
+                                        <th  class="text-center">
+                                            实验名称
+                                        </th>
+                                        <th  class="text-center">
+                                            操作
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <c:forEach items="${pager.data}" var="question">
+                                        <tr>
+                                            <td class=text-center>
+                                                B052055
+                                            </td>
+                                            <td class=text-center>
+                                                16315
+                                            </td>
+                                            <td class=text-center>
+                                                实验一
+                                            </td>
+
+                                            <td class="text-center">
+                                                <button class="btn btn-info glyphicon glyphicon-edit" data-toggle="modal"  ng-click="open()" >
+                                                        修改
+                                                </button>
+                                            </td>
+                                        </tr>
+                                    </c:forEach>
+                                </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <td colspan="4" class="info">
+
+                                        </td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                        <div class="panel-footer">
+                        </div>
+                    </div>
+                </div>
+        </div>
+      </div>
+    </div><!--/.fluid-container-->
+</div>
+<!--<div class="sidebar" id="sidebar">
+                    <script type="text/javascript">
+                        try{ace.settings.check('sidebar' , 'fixed')}catch(e){}
+                    </script>
+
+
+
+
+                    <div class="sidebar-collapse" id="sidebar-collapse">
+                        <i class="icon-double-angle-left" data-icon1="icon-double-angle-left" data-icon2="icon-double-angle-right"></i>
+                    </div>
+
+                    <script type="text/javascript">
+                        try{ace.settings.check('sidebar' , 'collapsed')}catch(e){}
+                    </script>
+                </div>-->
+<!--model 实验信息录入-->
+    <script type="text/ng-template" id="myModalContent.html" >
+        <div class="modal-header" style="height: 100px;">
+            <h6 class="modal-title">实验信息录入</h6>
+        </div>
+        <div class="modal-body">
+            <label>实验编号</label>
+            <input type="text" class="form-control"  />
+            <label>实验名称</label>
+            <input type="text" class="form-control"  />
+            <label>实验分数权重</label>
+            <input type="text" class="form-control"  value="占总分的百分比"/>
+            <label>上传日期</label>
+            <input type="date" class="form-control" style="width:140px "></input>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-info" type="button" ng-click="ok()">OK</button>
+            <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+        </div>
+    </script>
+    <!--model 实验信息修改-->
+        <script type="text/ng-template" id="myModalContentmodi.html" >
+        <div class="modal-header" style="height: 100px;">
+            <h6 class="modal-title">实验信息修改</h6>
+        </div>
+        <div class="modal-body">
+            <label>实验编号</label>
+            <input type="text" class="form-control"  value="显示实验编号" />
+            <label>实验名称</label>
+            <input type="text" class="form-control"  value="显示实验名称"/>
+            <label>实验分数权重</label>
+            <input type="text" class="form-control" value="显示占总分的百分比"/>
+            <label>修改日期</label>
+            <input type="date" class="form-control" style="width:140px "></input>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-info" type="button" ng-click="ok()">OK</button>
+            <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+        </div>
+    </script>
+
+</body>
+</html>
